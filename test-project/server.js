@@ -13,12 +13,8 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
-app.get('/', (req, res) => {
-	res.send('Hello remote world!\n');
+app.use(express.static('public'));
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
 });
-
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
-
-// Used for automated testing
-if(process.env.REGRESSION_TESTING === 'true') { process.exit(0); }
