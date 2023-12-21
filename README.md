@@ -6,7 +6,6 @@ This is an example Node.js project used in Daytona.
 
 Open the terminal and run:
 ```sh
-cd test-project
 npm install
 ```
 
